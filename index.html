@@ -6,23 +6,24 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="styles/normalize.css">
     <link rel="stylesheet" type="text/css" href="styles/styles.css">
+    <script src="js/menu.js"></script>
     <title>Tachoin | Hlavní stránka</title>
 </head>
 <body>
     <header class="site-header">
         <nav class="header__navbar">
             <a class="hnavbar__logo" href="index.html"><img src="images/Logo-NapisBily.svg" alt="Logo stránky, bílý nápis Tachoin"></a>
-            <ul class="hnavbar_list">
+            <ul class="hnavbar_list" id="navbar_list-click"> 
                 <li><a href="index.html">Hlavní stránka</a></li>
                 <li class="hnavbar_sluzby" id="sluzby-click"><a href="javascript:void(0)">Služby</a></li>
-                <li id="sluzby-active">
+                <li class="sluzby_poditemy" id="sluzby-active">
                     <ul class="hnavbar_podsluzby">
                         <li><a>Tachografy</a></li>
                         <li><a>Školení</a></li>
                     </ul>
                 </li>
                 <li><a href="">Kontakt</a></li>
-                <li><a href="">login</a></li>
+                <li class="hnavbar_login"><a href="">login</a></li>
             </ul>
             <a href="javascript:void(0)" class="hnavbar__hamburger" id="hamburger-click">
                 <span></span>
@@ -35,7 +36,7 @@
             <h2 class="heading_text__subheading">Poradenství a celní deklarace</h2>
         </div>
     </header>
-    <a href="https://www.datacho.cz/" class="datacho_advert"><img src="images/DatachoReklama.png" alt="Reklama a proklik k partnerovi Datacho"></a>
+    <a href="https://www.datacho.cz/" target="_blank" class="datacho_advert"><img src="images/DatachoReklama.png" alt="Reklama a proklik k partnerovi Datacho"></a>
     <hr class="line1">
     <main class="site-main">
         <section class="informations">
@@ -57,9 +58,39 @@
         <hr class="line1">
         <section class="advert">
             <p class="advert__heading">Všechny potřebné soubory naleznete na stránkách:</p>
-            <a class="advert__img" href="https://www.datacho.cz/"><img src="images/DatachoReklama2.svg" alt="Reklama a proklik k partnerovi Datacho"></a>
+            <a class="advert__img" href="https://www.datacho.cz/" target="_blank"><img src="images/DatachoReklama2.svg" alt="Reklama a proklik k partnerovi Datacho"></a>
         </section>
     </main>
-    <footer></footer>
+    <footer>
+        <div class="footer_top">
+            <a class="ftop__logo" href="index.html"><img src="images/Logo-NapisBily.svg" alt="Logo stránky, bílý nápis Tachoin"></a>
+            <ul class="ftop_list">
+                <li>
+                    <p class="f_top_list__heading">E-mail</p>
+                    <p>info@tachoin.cz</p>
+                </li>
+                <li>
+                    <p class="f_top_list__heading">Mobil</p>
+                    <p>+420 739 442 985</p>
+                </li>
+                <li>
+                    <p class="f_top_list__heading">Adresa</p>
+                    <p>Chrastavská 327/23</p>
+                    <p>460 02, Liberec</p>
+                </li>
+                <li>
+                    <p class="f_top_list__heading">IČO</p>
+                    <p>28738039</p>
+                    <p class="f_top_list__heading">>DIČ</p>
+                    <p>CZ28738039</p>
+                </li>
+            </ul>
+        </div>
+        <hr class="lineWhite">
+        <div class="footer_bottom">
+            <p>© Copyright 2023 - TachoIn.cz</p>
+            <p><u>Developer</u></p>
+        </div>
+    </footer>
 </body>
 </html>
