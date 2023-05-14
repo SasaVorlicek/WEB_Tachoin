@@ -43,6 +43,7 @@ body {
     background-position: center center;
     background-size: cover;
     height: 65vh;
+    overflow-x: hidden;
 }
 
 .header__navbar {
@@ -58,6 +59,51 @@ body {
     height: 70px;
 }
 
+.site-active {
+    border-bottom: 3px solid white;
+    padding-bottom: 2px !important;
+}
+
+@media screen and (max-width: 799px) { 
+    
+    .site-active + li {
+        padding-top: 10px !important;
+    }
+
+    .hnavbar_list li {
+        padding: 5px 0;
+      }
+
+      .hnavbar_list > li:nth-last-of-type(2) {
+        margin-bottom: 28px;
+    }
+    .hnavbar__podsluzby {
+        top: 51%;
+        left: 39%;
+    }
+    .hnavbar__podsluzby::before {
+        top: -5px;
+        left: 8px;
+    }
+    
+}
+
+.hnavbar__podsluzby {
+    display: none;
+    position: absolute;
+    z-index: 20;
+}
+
+.hnavbar__podsluzby::before {
+    content: " ";
+    width: 0; 
+    height: 0; 
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 10px solid white;
+    position: absolute;
+} 
+
 .hnavbar_list {
     list-style-type: none;
     display: none;
@@ -69,11 +115,7 @@ body {
     border-radius: 30px 0px 0px 30px;
     top: 140%;
     right: -50%;
-    transition: right 0.5s ease-in-out;
-  }
-
-  .hnavbar_list li {
-    padding: 5px 0;
+    transition: right 0.3s ease-in-out;
   }
 
 .hnavbar_list li a {
@@ -83,33 +125,13 @@ body {
 
 .menu-active {
     display: flex;
-    transition: right 0.5s ease-in-out;
+    transition: right 0.3s ease-in-out;
 }
 
 .hnavbar_sluzby::after {
     content: url(../images/icons/arrow-down.svg);
     margin-left: 2px;
-}
-
-.hnavbar__podsluzby {
-    display: none;
-    position: absolute;
-    top: 51%;
-    left: 37%;
-    z-index: 1;
-}
-
-.hnavbar__podsluzby::before {
-    content: " ";
-    width: 0; 
-    height: 0; 
-    border-left: 6px solid transparent;
-    border-right: 6px solid transparent;
-    border-bottom: 10px solid white;
-
-    position: absolute;
-    top: -5px;
-    left: 8px;
+    cursor: pointer;
 }
 
 .podsluzby__list {
@@ -119,10 +141,6 @@ body {
     list-style-type: none;
     padding: 0.5em 1em;
     padding-left: 10px;
-}
-
-.hnavbar_list > li:nth-last-of-type(2) {
-    margin-bottom: 28px;
 }
 
 .hnavbar_login a {
@@ -151,37 +169,50 @@ body {
 .hnavbar__hamburger {
     display: flex;
     flex-direction: column;
-    gap: 7px;
     width: 40px;
+    height: 33px;
+    position: relative;
 }
 
 .hnavbar__hamburger span {
     content: "";
     background-color: white;
     width: 100%;
-    height: 6.5px;
+    height: 7px;
     border-radius: 1em;
+    position: absolute;
 }
 
+.hnavbar__hamburger span:first-of-type {
+    top: 0;
+    transition: top 0.1s ease-in-out 0.1s, transform 0.2s ease-in-out;
+}
 .hnavbar__hamburger span:nth-of-type(2) {
+    top: 13px;
     transform: translateX(0);
     opacity: 1;
     transition: transform 0.5s, opacity 0.5s;
 }
+.hnavbar__hamburger span:last-of-type {
+    bottom: 0;
+    transition: bottom 0.1s ease-in-out 0.1s, transform 0.2s ease-in-out;
+}
 
 .ham-active span:first-of-type {
     transform:rotate(45deg);
+    transition: top 0.1s ease-in-out, transform 0.2s ease-in-out 0.1s;
+    top: 13px;
 }
 .ham-active span:nth-of-type(2) {
     transform: translateX(100px);
-    transition: transform 0.5, opacity 0.5s;
+    transition: transform 0.5s, opacity 0.5s;
     opacity: 0;
 }
 .ham-active span:last-of-type {
     transform: rotate(-45deg);
+    transition: bottom 0.1s ease-in-out, transform 0.2s ease-in-out 0.1s;
+    bottom: 13px;
 }
-
-
 
 .header__heading_text {
     background-color: rgba(169, 35, 35, 50%);
@@ -211,8 +242,16 @@ body {
     font-weight: 500;
 }
 
+.datacho_advert {
+    display: flex;
+    justify-content: center;
+}
+
 .datacho_advert img {
     width: 100%;
+    max-width: 700px;
+
+
 }
 
 .site-main {
@@ -247,3 +286,78 @@ body {
     height: 80px;
 }
 
+
+
+
+@media screen and (min-width: 800px) { 
+    .site-header {
+        height: 80vh
+    }
+    .header__navbar {
+        padding: 0.5em 1.5em;
+        position: absolute;
+        left: 7%;
+        right: 7%;
+        top: 5%;
+        border-radius: 10px;
+    }
+    .hnavbar__hamburger {
+        display: none;
+    }
+
+    .hnavbar_list {
+        display: flex;
+        position: static;
+        flex-direction: row;
+        align-items: center;
+        padding: 0;
+        gap: 1.4em;                                                  
+    }
+
+    .hnavbar_login {
+        position: static;
+    }
+
+    .hnavbar__podsluzby {
+        bottom: -45px;
+        right: 85px;
+    }
+    
+    .hnavbar__podsluzby::before {
+        top: -8px;
+        left: 22px;
+    }
+
+    .podsluzby__list {
+        padding: 0.5em 1.2em;
+        padding-right: 2.3em;
+    }
+
+    .podsluzby__list li {
+        padding: 0.2em 0;
+    }
+
+    .header__heading_text {
+        margin-top: 16em;
+        padding: 2em 2.5em;
+    }
+}
+
+@media screen and (min-width: 1100px) { 
+    .header__navbar {
+        padding: 0.5em 3em;
+    }
+    .hnavbar_list {
+        gap: 3em;
+    }
+    .header__heading_text {
+        margin-top: 15em;
+        padding: 2.3em 2.8em
+    }
+    .heading_text__heading {
+        font-size: 5.5em;
+    }
+    .heading_text__subheading {
+        font-size: 1.6em;
+    }
+}
