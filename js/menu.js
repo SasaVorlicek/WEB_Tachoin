@@ -1,7 +1,9 @@
 document.addEventListener("DOMContentLoaded", () => {
 
     const navbarList = document.getElementById('navbar_list-click');
-    document.getElementById("hamburger-click").addEventListener("click", () => {
+    const hamburger = document.getElementById("hamburger-click")
+    let k = 0
+    hamburger.addEventListener("click", () => {
         navbarList.classList.toggle("menu-active");
         if (navbarList.classList.contains('menu-active')) {
             setTimeout(() => {
@@ -10,6 +12,8 @@ document.addEventListener("DOMContentLoaded", () => {
           } else {
             navbarList.style.right = '';
           }
+          hamburger.classList.toggle("ham-active")     
+
     })
     document.getElementById("sluzby-click").addEventListener("click", () => {
         document.getElementById("sluzby-active").classList.toggle("sluzby-active")

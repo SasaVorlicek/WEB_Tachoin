@@ -28,6 +28,13 @@ body {
     padding: 0;
 }
 
+.line1 {
+    width: 70%;
+    margin: 40px auto;
+    border: 1px dashed #e8e5e5;
+
+}
+
 
 
 .site-header {
@@ -74,19 +81,67 @@ body {
     text-decoration: none;
 }
 
+.menu-active {
+    display: flex;
+    transition: right 0.5s ease-in-out;
+}
+
+.hnavbar_sluzby::after {
+    content: url(../images/icons/arrow-down.svg);
+    margin-left: 2px;
+}
+
+.hnavbar__podsluzby {
+    display: none;
+    position: absolute;
+    top: 51%;
+    left: 37%;
+    z-index: 1;
+}
+
+.hnavbar__podsluzby::before {
+    content: " ";
+    width: 0; 
+    height: 0; 
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 10px solid white;
+
+    position: absolute;
+    top: -5px;
+    left: 8px;
+}
+
+.podsluzby__list {
+    background-color: #901A1A;
+    border: 2px solid #FFFFFF;
+    border-radius: 5px;
+    list-style-type: none;
+    padding: 0.5em 1em;
+    padding-left: 10px;
+}
+
+.hnavbar_list > li:nth-last-of-type(2) {
+    margin-bottom: 28px;
+}
+
 .hnavbar_login a {
     text-transform: uppercase;
     font-family: MainFontBold;
     font-size: 18px;
 }
 
-.menu-active {
+.hnavbar_login {
+    position: absolute;
+    bottom: 15px;
+    right: 25px;
     display: flex;
-    transition: right 0.5s ease-in-out;
+    align-items: center;
 }
 
-.sluzby_poditemy {
-    display: none;
+.hnavbar_login::before {
+    content: url(../images/icons/user.svg);
+    margin-right: 3px;
 }
 
 .sluzby-active {
@@ -108,9 +163,30 @@ body {
     border-radius: 1em;
 }
 
+.hnavbar__hamburger span:nth-of-type(2) {
+    transform: translateX(0);
+    opacity: 1;
+    transition: transform 0.5s, opacity 0.5s;
+}
+
+.ham-active span:first-of-type {
+    transform:rotate(45deg);
+}
+.ham-active span:nth-of-type(2) {
+    transform: translateX(100px);
+    transition: transform 0.5, opacity 0.5s;
+    opacity: 0;
+}
+.ham-active span:last-of-type {
+    transform: rotate(-45deg);
+}
+
+
+
 .header__heading_text {
     background-color: rgba(169, 35, 35, 50%);
     width: 70%;
+    max-width: 330px;
     margin: 0 auto;
     margin-top: 4em;
     border-radius: 24px;
@@ -135,22 +211,21 @@ body {
     font-weight: 500;
 }
 
-
-
-
-
-
-
-
-
-
-
-
-
-
 .datacho_advert img {
     width: 100%;
 }
+
+.site-main {
+    margin: 0 1em;
+}
+
+
+
+
+
+
+
+
 
 
 
