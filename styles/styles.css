@@ -106,7 +106,7 @@ body {
 
 .hnavbar_list {
     list-style-type: none;
-    display: none;
+    display: flex;
     position: absolute;
     flex-direction: column;
     background-color: var(--primary-red);
@@ -124,7 +124,7 @@ body {
 }
 
 .menu-active {
-    display: flex;
+    right: 0;
     transition: right 0.3s ease-in-out;
 }
 
@@ -320,7 +320,7 @@ body {
 
     .hnavbar__podsluzby {
         bottom: -45px;
-        right: 85px;
+        right: 96px;
     }
     
     .hnavbar__podsluzby::before {
@@ -349,6 +349,16 @@ body {
     }
     .hnavbar_list {
         gap: 3em;
+    }
+
+    .hnavbar__podsluzby {
+        bottom: -55px;
+        right: 170px;
+    }
+    
+    .hnavbar__podsluzby::before {
+        top: -8px;
+        left: 22px;
     }
     .hnavbar_list li a {
         font-size: 1.2em;

@@ -5,13 +5,6 @@ document.addEventListener("DOMContentLoaded", () => {
     let k = 0
     hamburger.addEventListener("click", () => {
         navbarList.classList.toggle("menu-active");
-        if (navbarList.classList.contains('menu-active')) {
-            setTimeout(() => {
-              navbarList.style.right = '0';
-            }, 0);
-          } else {
-            navbarList.style.right = '';
-          }
           hamburger.classList.toggle("ham-active")     
 
     })
