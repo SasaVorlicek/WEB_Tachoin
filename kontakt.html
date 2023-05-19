@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="styles/normalize.css">
+    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+    <link href="images/FaviconWhite.svg" rel="icon" media="(prefers-color-scheme: dark)"/>
+    <link href="images/Favicon.svg" rel="icon" media="(prefers-color-scheme: light)"/>
+    <script src="js/menu.js"></script>
+    
+    <title>Tachoin | Hlavní stránka</title>
+</head>
+<body>
+    <header class="site-header others--header">
+        <nav class="header__navbar">
+            <a class="hnavbar__logo" href="index.html"><img src="images/Logo-NapisBily.svg" alt="Logo stránky, bílý nápis Tachoin"></a>
+            <ul class="hnavbar_list" id="navbar_list-click"> 
+                <li class="site-active"><a href="index.html">Hlavní stránka</a></li>
+                <li class="hnavbar_sluzby" id="sluzby-click"><a href="javascript:void(0)">Služby</a></li>
+                <li class="hnavbar__podsluzby" id="sluzby-active">
+                    <ul class="podsluzby__list">
+                        <li><a href="tachografy.html">Tachografy</a></li>
+                        <li><a href="skoleni.html">Školení</a></li>
+                    </ul>
+                </li>
+                <li><a href="kontakt.html">Kontakt</a></li>
+                <li class="hnavbar_login"><a href="https://milos.blutacho.com/">login</a></li>
+            </ul>
+            <a href="javascript:void(0)" class="hnavbar__hamburger" id="hamburger-click">
+                <span></span>
+                <span></span>
+                <span></span>
+            </a>
+        </nav>
+    </header>
+    <main class="site-main"> 
+        <p class="kontakt_heading">Neváhejte nás s čímkoliv kontaktovat!</p>
+        <p class="kontakt_subheading">Pro jakékoliv dotazy nás můžete kontaktovat na číslo <a href="tel:+420739442985">+420 739 442 985</a>, nebo na e-mail <a href="mailto:info@tachoin.cz">info@tachoin.cz</a> pomocí formuláře níže.</p>
+
+        <form class="kontakt_form">
+            <label for="jmeno">Vaše jméno</label>
+            <input required id="jmeno" type="text">
+            <label for="email">Váš e-mail</label>
+            <input required id="email" type="text">
+            <label for="tel">Vaše telefon</label>
+            <input required id="tel" type="text">
+            <label for="textarea">Zpráva pro nás</label>
+            <textarea id="textarea"></textarea>
+            <p class="submit__cta"><button type="submit" class="submit_button">Odeslat</button></p>
+        </form>
+    </main>
+    <footer class="site-footer">
+        <div class="footer_top">
+            <a class="ftop__logo" href="index.html"><img src="images/Logo-NapisBily.svg" alt="Logo stránky, bílý nápis Tachoin"></a>
+            <ul class="ftop_list">
+                <li>
+                    <p class="ftop_list__heading">E-mail</p>
+                    <a href="mailto:info@tachoin.cz" >info@tachoin.cz</a>
+                </li>
+                <li>
+                    <p class="ftop_list__heading">Mobil</p>
+                    <a href="tel:+420739442985">+420 739 442 985</a>
+                </li>
+                <li>
+                    <p class="ftop_list__heading">Adresa</p>
+                    <p>Chrastavská 327/23</p>
+                    <p>460 02, Liberec</p>
+                </li>
+                <li>
+                    <p class="ftop_list__heading diff--margin">IČO</p>
+                    <p>28738039</p>
+                    <p class="ftop_list__heading diff--margin">DIČ</p>
+                    <p>CZ28738039</p>
+                </li>
+            </ul>
+        </div>
+        <hr class="lineWhite">
+        <div class="footer_bottom">
+            <p>© Copyright 2023 - Tachoin.cz</p>
+            <p><u>WEB Developer</u></p>
+        </div>
+    </footer>
+</body>
+</html>

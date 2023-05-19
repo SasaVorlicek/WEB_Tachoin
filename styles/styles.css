@@ -23,6 +23,10 @@
     font-family: MainFont, sans-serif;
 }
 
+*::selection {
+    background-color: #bd4444;
+}
+
 body {
     margin: 0;
     padding: 0;
@@ -44,6 +48,11 @@ body {
     background-size: cover;
     height: 65vh;
     overflow-x: hidden;
+    filter: drop-shadow(0px 1px 10px #969595);
+}
+
+.others--header {
+    height: 45vh;
 }
 
 .header__navbar {
@@ -53,6 +62,7 @@ body {
     justify-content: space-between;
     padding: 0.5em 1.5em;
     position: relative;
+    user-select: none;
 }
 
 .hnavbar__logo img{
@@ -114,7 +124,7 @@ body {
     padding-left: 2em;
     border-radius: 30px 0px 0px 30px;
     top: 140%;
-    right: -50%;
+    right: -100%;
     transition: right 0.3s ease-in-out;
   }
 
@@ -267,12 +277,14 @@ body {
 .informations_item {
     display: flex;
     flex-direction: column;
+    align-items: center;
     gap: 1em;
     margin: 0;
 }
 
 .informations_item img {
     width: 100%;
+    max-width: 590px;
     border-radius: 30px;
 }
 
@@ -311,20 +323,117 @@ body {
 
 .site-footer {
     background-color: var(--primary-red);
+    margin-top: 7em;
+    padding: 1em 2em;
 }
 
+.ftop_list {
+    list-style-type: none;
+    color: white;
+    padding: 0;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1em;
+}
 
+.ftop_list li {
+    width: 140px;
+}
 
+.ftop_list a {
+    text-decoration: underline;
+    color: white;
+}
+.ftop_list p {
+    margin: 0;
+}
 
-
-
+p.ftop_list__heading {
+    font-family: MainFontBold;
+    font-weight: 700;
+    margin-top: 17px;
+    margin-bottom: 10px;
+}
 
 .ftop__logo img {
-    height: 80px;
+    height: 90px;
+}
+
+.footer_bottom {
+    display: flex;
+    color: white;
+    justify-content: space-between;
 }
 
 
 
+.kontakt_heading {
+    font-family: MainFontBold;
+    font-weight: 800;
+    font-size: 2.2em;
+    text-align: center;
+    margin-bottom: 0;
+}
+
+.kontakt_subheading {
+    text-align: center;
+    font-size: 1em;
+}
+
+.kontakt_subheading a {
+    color: black;
+}
+
+.kontakt_form {
+    background-color: #F6F6F5;
+    display: flex;  
+    flex-direction: column;
+    margin-top: 3em;
+    padding: 3em;
+}
+
+.kontakt_form label {
+    font-family: MainFontBold;
+    font-weight: 700;
+    margin-bottom: 5px;
+}
+
+.kontakt_form label:has(+input[required])::after {
+    content: "*";
+    color: var(--primary-red);
+    font-size: 1.3em;
+}
+
+.kontakt_form input {
+    width: 100%;
+    height: 40px;
+    border: 2px black solid;
+    margin: 0 auto;
+    margin-bottom: 1.5em;
+}
+
+.kontakt_form textarea {
+    margin: 0 auto;
+    height: 250px;
+    width: 100%;
+    border: 2px black solid;
+}
+
+.submit__cta {
+    text-align: center;
+    margin-top: 3em;
+}
+
+.submit_button {
+    color: white;
+    background-color: var(--primary-red);
+    padding: 0.8em 1.5em;
+    border: none;
+    border-radius: 25px;
+    font-family: MainFontBold;
+    font-size: 1.3em;
+}
 
 @media screen and (min-width: 800px) { 
 
@@ -334,6 +443,10 @@ body {
     .site-header {
         height: 80vh
     }
+    .others--header {
+        height: 20vh;
+    }
+
     .header__navbar {
         padding: 0.5em 1.5em;
         position: absolute;
@@ -342,6 +455,10 @@ body {
         top: 5%;
         border-radius: 10px;
     }
+    .others--header .header__navbar {
+        top: 15%;
+    }
+
     .hnavbar__hamburger {
         display: none;
     }
@@ -387,25 +504,46 @@ body {
         margin: 0 5em;
     }
 
-    .informations_item {
-        flex-direction: row-reverse;
-        gap: 4em;
+    .informations_item figcaption p:last-of-type {
+        font-size: 1.1em;
     }
 
-    .informations_item:first-of-type {
-        flex-direction: row;
-    }
-    .informations_item img {
-        width: 50%;
-    } 
-    .informations_item figcaption p {
-        text-align: left;
+    .informations_item figcaption {
+        max-width: 550px;
     }
 
     .advert__heading {
         font-size: 3em;
         margin-bottom: 1em;
     } 
+
+    .site-footer {
+        padding: 1em 5em;
+    }
+
+    .ftop_list {
+        justify-content: space-between;
+        margin-bottom: 2em;
+    }
+
+    .ftop_list li:nth-of-type(3) {
+        order:-1;
+    }
+
+    .footer_bottom {
+        padding: 0 3em;
+    }
+
+
+
+
+    .kontakt_heading {
+        font-size: 3em;
+    }
+    
+    .kontakt_subheading {
+        font-size: 1.2em;
+    }
 }
 
 @media screen and (min-width: 1100px) { 
@@ -437,5 +575,97 @@ body {
     }
     .heading_text__subheading {
         font-size: 1.6em;
+    }
+
+    .site-main {
+        margin: 0 6em;
+    }
+
+    .informations_item {
+        flex-direction: row-reverse;
+        gap: 4em;
+    }
+
+    .informations_item figcaption {
+        max-width: 10000px
+    }
+
+    .informations_item:first-of-type {
+        flex-direction: row;
+    }
+    .informations_item img {
+        width: 50%;
+        max-width: 100000px;
+    } 
+    .informations_item figcaption p {
+        text-align: left;
+        font-size: 3.5em;
+    }
+    .informations_item figcaption p:last-of-type {
+        font-size: 1.3em;
+    }
+
+    .ftop_list {
+        gap: 3.5em;
+        margin-bottom: 10px;
+    }
+
+    p.ftop_list__heading {
+        margin-top: 0;
+    }
+
+    .footer_top {
+        display: flex;
+        justify-content: space-between;
+    }
+
+    p.diff--margin {
+        margin-bottom: 0;
+    }
+
+    .kontakt_form label {
+        width: 80%;
+        margin: 0 auto;
+        margin-bottom: 5px;
+    }
+
+    .kontakt_form input {
+        width: 80%;
+        padding-left: 10px;
+    }
+    .kontakt_form textarea {
+        height: 270px;
+        width: 80%;
+        padding-left: 10px;
+        padding-top: 10px;
+    }
+}
+
+@media screen and (min-width: 1400px) { 
+    .ftop_list {
+        gap: 7em;
+    }
+
+    .informations_item {
+        gap: 8em;
+    }
+
+    .informations_item figcaption p {
+        font-size: 4em;
+    }
+
+    .informations_item figcaption p:last-of-type {
+        font-size: 1.5em;
+    }
+    .site-main {
+        margin: 0 9em;
+    }
+
+    .kontakt_heading {
+        font-size: 3.2em;
+    }
+    
+    .kontakt_subheading {
+        font-size: 1.2em;
     }
 }
