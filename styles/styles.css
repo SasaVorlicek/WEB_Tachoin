@@ -289,12 +289,12 @@ body {
     border-radius: 30px;
 }
 
-.informations_item figcaption p {
+.informations_item figcaption h3, .informations_item figcaption p {
     text-align: center;
     margin: 0;
 }
 
-.informations_item figcaption p:first-of-type {
+.informations_item figcaption h3 {
     font-family: MainFontBold;
     font-size: 3em;
     margin-bottom: 10px;
@@ -483,7 +483,7 @@ p.ftop_list__heading {
         margin: 5em auto;
     }
     .site-header {
-        height: 80vh
+        height: 65vh
     }
     .others--header {
         height: 23vh;
@@ -546,7 +546,7 @@ p.ftop_list__heading {
         margin: 0 5em;
     }
 
-    .informations_item figcaption p:last-of-type {
+    .informations_item figcaption p {
         font-size: 1.1em;
     }
 
@@ -609,7 +609,7 @@ p.ftop_list__heading {
         font-size: 1.2em;
     }
     .header__heading_text {
-        margin-top: 15em;
+        margin-top: 12em;
         padding: 2.3em 2.8em
     }
     .heading_text__heading {
@@ -639,12 +639,12 @@ p.ftop_list__heading {
         width: 50%;
         max-width: 100000px;
     } 
-    .informations_item figcaption p {
+    .informations_item figcaption h3,.informations_item figcaption p  {
         text-align: left;
         font-size: 3.5em;
     }
-    .informations_item figcaption p:last-of-type {
-        font-size: 1.3em;
+    .informations_item figcaption p {
+        font-size: 1.1em;
     }
 
     .ftop_list {
@@ -692,12 +692,12 @@ p.ftop_list__heading {
         gap: 8em;
     }
 
-    .informations_item figcaption p {
+    .informations_item figcaption h3 {
         font-size: 4em;
     }
 
-    .informations_item figcaption p:last-of-type {
-        font-size: 1.5em;
+    .informations_item figcaption p {
+        font-size: 1.3em;
     }
     .site-main {
         margin: 0 9em;
@@ -709,5 +709,17 @@ p.ftop_list__heading {
     
     .kontakt_subheading {
         font-size: 1.2em;
+    }
+}
+
+@media screen and (min-width: 1600px) { 
+    .informations_item figcaption p {
+        font-size: 1.5em;
+    }
+}
+
+@media screen and (min-width: 1800px) { 
+    .informations_item figcaption p {
+        font-size: 1.7em;
     }
 }
