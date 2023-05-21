@@ -289,6 +289,7 @@ h1,h2,h3,h4,h5,h6 {
 
 .informations_item figcaption {
     max-width: 550px;
+    padding: 0 20px;
 }
 
 .informations_item img {
@@ -485,7 +486,7 @@ p.ftop_list__heading {
   }
 
   .sluzby {
-    margin-top: 7em;
+    margin-top: 5em;
   }
 
   .sluzby__heading {
