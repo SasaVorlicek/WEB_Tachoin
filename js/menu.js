@@ -1,7 +1,4 @@
 document.addEventListener("DOMContentLoaded", () => {
-
-    console.log(navigator.language)
-
     const navbarList = document.getElementById('navbar_list-click');
     const hamburger = document.getElementById("hamburger-click")
     let k = 0

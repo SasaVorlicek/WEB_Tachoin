@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="cs">
 <head>
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -9,6 +9,7 @@
     <link href="images/FaviconWhite.svg" rel="icon" media="(prefers-color-scheme: dark)"/>
     <link href="images/Favicon.svg" rel="icon" media="(prefers-color-scheme: light)"/>
     <script src="js/menu.js"></script>
+    <script src="js/emailPopUp.js"></script>
     
     <title>Tachoin | Hlavní stránka</title>
 </head>
@@ -17,7 +18,7 @@
         <nav class="header__navbar">
             <a class="hnavbar__logo" href="index.html"><img src="images/Logo-NapisBily.svg" alt="Logo stránky, bílý nápis Tachoin"></a>
             <ul class="hnavbar_list" id="navbar_list-click"> 
-                <li class="site-active"><a href="index.html">Hlavní stránka</a></li>
+                <li><a href="index.html">Hlavní stránka</a></li>
                 <li class="hnavbar_sluzby" id="sluzby-click"><a href="javascript:void(0)">Služby</a></li>
                 <li class="hnavbar__podsluzby" id="sluzby-active">
                     <ul class="podsluzby__list">
@@ -25,7 +26,7 @@
                         <li><a href="skoleni.html">Školení</a></li>
                     </ul>
                 </li>
-                <li><a href="kontakt.html">Kontakt</a></li>
+                <li class="site-active"><a href="kontakt.html">Kontakt</a></li>
                 <li class="hnavbar_login"><a href="https://milos.blutacho.com/">login</a></li>
             </ul>
             <a href="javascript:void(0)" class="hnavbar__hamburger" id="hamburger-click">
@@ -39,17 +40,23 @@
         <p class="kontakt_heading">Neváhejte nás s čímkoliv kontaktovat!</p>
         <p class="kontakt_subheading">Pro jakékoliv dotazy nás můžete kontaktovat na číslo <a href="tel:+420739442985">+420 739 442 985</a>, nebo na e-mail <a href="mailto:info@tachoin.cz">info@tachoin.cz</a> pomocí formuláře níže.</p>
 
-        <form class="kontakt_form">
+        <form class="kontakt_form" id="form">
             <label for="jmeno">Vaše jméno</label>
             <input required id="jmeno" type="text">
             <label for="email">Váš e-mail</label>
-            <input required id="email" type="text">
+            <input required id="email" type="email">
             <label for="tel">Vaše telefon</label>
-            <input required id="tel" type="text">
+            <input required id="tel" type="tel">
             <label for="textarea">Zpráva pro nás</label>
             <textarea id="textarea"></textarea>
             <p class="submit__cta"><button type="submit" class="submit_button">Odeslat</button></p>
         </form>
+        <div id="FormPopup" class="form__PopupWindow">
+            <div class="PopupWindow_content">
+              <p>Formulář byl odeslán</p>
+              <button id="FormCloseBtn">Zavřít</button>
+            </div>
+          </div>
     </main>
     <footer class="site-footer">
         <div class="footer_top">
