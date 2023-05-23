@@ -11,7 +11,7 @@
     <script src="js/menu.js"></script>
     <script src="js/emailPopUp.js"></script>
     
-    <title>Tachoin | Hlavní stránka</title>
+    <title>Tachoin | Kontakt</title>
 </head>
 <body>
     <header class="site-header others--header">
@@ -40,15 +40,21 @@
         <p class="kontakt_heading">Neváhejte nás s čímkoliv kontaktovat!</p>
         <p class="kontakt_subheading">Pro jakékoliv dotazy nás můžete kontaktovat na číslo <a href="tel:+420739442985">+420 739 442 985</a>, nebo na e-mail <a href="mailto:info@tachoin.cz">info@tachoin.cz</a> pomocí formuláře níže.</p>
 
-        <form class="kontakt_form" id="form">
+        <form class="kontakt_form" id="form" action="submit-form.php">
             <label for="jmeno">Vaše jméno</label>
-            <input required id="jmeno" type="text">
+            <input required id="jmeno" type="text" name="jmeno">
             <label for="email">Váš e-mail</label>
-            <input required id="email" type="email">
+            <input required id="email" type="email" name="email">
             <label for="tel">Vaše telefonní číslo</label>
-            <input required id="tel" type="tel">
+            <input required id="tel" type="tel" name="tel" pattern="[0-9 ]+" title="Vložte prosím reálné telefonní číslo">
+            <label for="subject">Služby</label>
+            <select id="subject" name="subject" required>
+                <option disabled selected >--Vyberte předmět Vaší zprávy--</option>
+                <option>Školení</option>
+                <option>Tachografy</option>
+            </select>
             <label for="textarea">Zpráva pro nás</label>
-            <textarea id="textarea"></textarea>
+            <textarea id="textarea" name="textarea" required></textarea>
             <p class="submit__cta"><button type="submit" class="submit_button">Odeslat</button></p>
         </form>
         <div id="FormPopup" class="form__PopupWindow">
@@ -56,7 +62,13 @@
               <p>Formulář byl odeslán</p>
               <button id="FormCloseBtn">Zavřít</button>
             </div>
-          </div>
+        </div>
+        <div id="FormPopupError" class="form__PopupWindow">
+            <div class="PopupWindow_content">
+              <p>Nastala chyba, zkuste to prosím znovu</p>
+              <button id="FormCloseBtn">Zavřít</button>
+            </div>
+        </div>
     </main>
     <footer class="site-footer">
         <div class="footer_top">

@@ -1,7 +1,6 @@
 document.addEventListener("DOMContentLoaded", () => {
     const navbarList = document.getElementById('navbar_list-click');
     const hamburger = document.getElementById("hamburger-click")
-    let k = 0
     hamburger.addEventListener("click", () => {
         navbarList.classList.toggle("menu-active");
           hamburger.classList.toggle("ham-active")     
