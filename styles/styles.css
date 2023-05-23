@@ -423,6 +423,13 @@ p.ftop_list__heading {
     margin-bottom: 1.5em;
 }
 
+.kontakt_form_select__colored-option {
+    font-family: MainFontBold;
+    font-weight: 800;
+    background-color: var(--primary-red);
+    color: white;
+}
+
 .kontakt_form textarea {
     margin: 0 auto;
     height: 250px;

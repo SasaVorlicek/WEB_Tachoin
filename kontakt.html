@@ -50,11 +50,18 @@
             <label for="subject">Služby</label>
             <select id="subject" name="subject" required>
                 <option disabled selected >--Vyberte předmět Vaší zprávy--</option>
-                <option>Školení</option>
-                <option>Tachografy</option>
+                <option disabled class="kontakt_form_select__colored-option">----Školení----</option>
+                <option data-value="Dotazy1">Dotazy</option>
+                <option data-value="Objednávky1">Objednávky</option>
+                <option data-value="Podpora">Podpora</option>
+                <option disabled class="kontakt_form_select__colored-option">----Tachografy----</option>
+                <option data-value="Dotazy2">Dotazy</option>
+                <option data-value="Objednávky2">Objednávky</option>
+                <option data-value="Servis">Servis</option>
             </select>
             <label for="textarea">Zpráva pro nás</label>
             <textarea id="textarea" name="textarea" required></textarea>
+            <input type="hidden" id="PHPInput" name="PHPInput" value="">
             <p class="submit__cta"><button type="submit" class="submit_button">Odeslat</button></p>
         </form>
         <div id="FormPopup" class="form__PopupWindow">
