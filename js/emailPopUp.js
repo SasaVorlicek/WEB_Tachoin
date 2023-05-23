@@ -8,6 +8,9 @@ function Smazat() {
 
 document.addEventListener("DOMContentLoaded", () => { 
 
+  
+
+  //řešíme select optiony pro správný subject v emailu
   const select = document.getElementById('subject');
   select.addEventListener('change', function() {
     const selectedOption = select.options[select.selectedIndex];
@@ -15,14 +18,15 @@ document.addEventListener("DOMContentLoaded", () => {
     
     document.getElementById('PHPInput').value = selectedValue;
   });
+  //////
     const popup = document.getElementById("FormPopup");
     const popupError = document.getElementById("FormPopupError");
     const form = document.getElementById("form");
 
     form.addEventListener("submit", (event) => {
         event.preventDefault();
+
         const formData = new FormData(form);
-        
         fetch("submit-form.php", {
             method: "POST",
             body: formData,
@@ -49,5 +53,5 @@ document.addEventListener("DOMContentLoaded", () => {
             popupError.style.display = "none";
         }
     });
-})
+  });
 

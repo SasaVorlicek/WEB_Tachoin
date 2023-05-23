@@ -10,6 +10,7 @@
     <link href="images/Favicon.svg" rel="icon" media="(prefers-color-scheme: light)"/>
     <script src="js/menu.js"></script>
     <script src="js/emailPopUp.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
     
     <title>Tachoin | Kontakt</title>
 </head>
@@ -40,7 +41,7 @@
         <p class="kontakt_heading">Neváhejte nás s čímkoliv kontaktovat!</p>
         <p class="kontakt_subheading">Pro jakékoliv dotazy nás můžete kontaktovat na číslo <a href="tel:+420739442985">+420 739 442 985</a>, nebo na e-mail <a href="mailto:info@tachoin.cz">info@tachoin.cz</a> pomocí formuláře níže.</p>
 
-        <form class="kontakt_form" id="form" action="submit-form.php">
+        <form class="kontakt_form" id="form" action="submit-form.php" method="POST">
             <label for="jmeno">Vaše jméno</label>
             <input required id="jmeno" type="text" name="jmeno">
             <label for="email">Váš e-mail</label>
@@ -60,9 +61,9 @@
                 <option data-value="Servis">Servis</option>
             </select>
             <label for="textarea">Zpráva pro nás</label>
-            <textarea id="textarea" name="textarea" required></textarea>
+            <textarea id="textarea" name="textarea"></textarea>
             <input type="hidden" id="PHPInput" name="PHPInput" value="">
-            <p class="submit__cta"><button type="submit" class="submit_button">Odeslat</button></p>
+            <p class="submit__cta"><button disabled type="submit" class="submit_button">Odeslat</button></p>
         </form>
         <div id="FormPopup" class="form__PopupWindow">
             <div class="PopupWindow_content">
