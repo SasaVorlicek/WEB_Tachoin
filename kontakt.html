@@ -23,12 +23,13 @@
                 <li class="hnavbar_sluzby" id="sluzby-click"><a href="javascript:void(0)">Služby</a></li>
                 <li class="hnavbar__podsluzby" id="sluzby-active">
                     <ul class="podsluzby__list">
+                        <li><a href="tachoin.html">Tachoin</a></li>
                         <li><a href="tachografy.html">Tachografy</a></li>
                         <li><a href="skoleni.html">Školení</a></li>
                     </ul>
                 </li>
                 <li class="site-active"><a href="kontakt.html">Kontakt</a></li>
-                <li class="hnavbar_login"><a href="https://milos.blutacho.com/">login</a></li>
+                <li class="hnavbar_login"><a href="https://milos.blutacho.com/" target="_blank">login</a></li>
             </ul>
             <a href="javascript:void(0)" class="hnavbar__hamburger" id="hamburger-click">
                 <span></span>
@@ -38,8 +39,8 @@
         </nav>
     </header>
     <main class="site-main"> 
-        <p class="kontakt_heading">Neváhejte nás s čímkoliv kontaktovat!</p>
-        <p class="kontakt_subheading">Pro jakékoliv dotazy nás můžete kontaktovat na číslo <a href="tel:+420739442985">+420 739 442 985</a>, nebo na e-mail <a href="mailto:info@tachoin.cz">info@tachoin.cz</a> pomocí formuláře níže.</p>
+        <h1 class="main_headingType1">Neváhejte nás s čímkoliv kontaktovat!</h1>
+        <p class="main_subheadingType1">Pro jakékoliv dotazy nás můžete kontaktovat na číslo <a href="tel:+420731103488">+420 731 103 488</a>, nebo na e-mail <a href="mailto:info@tachoin.cz">info@tachoin.cz</a> pomocí formuláře níže.</p>
 
         <form class="kontakt_form" id="form" action="submit-form.php" method="POST">
             <label for="jmeno">Vaše jméno</label>
@@ -51,14 +52,18 @@
             <label for="subject">Služby</label>
             <select id="subject" name="subject" required>
                 <option disabled selected >--Vyberte předmět Vaší zprávy--</option>
-                <option disabled class="kontakt_form_select__colored-option">----Školení----</option>
+                <option disabled class="kontakt_form_select__colored-option">----Tachoin----</option>
+                <option data-value="Dotazy3">Dotazy</option>
+                <option data-value="Objednávky3">Objednávky</option>
+                <option data-value="Servis3">Servis</option>
+                <option disabled class="kontakt_form_select__colored-option">----Tachografy----</option>
                 <option data-value="Dotazy1">Dotazy</option>
                 <option data-value="Objednávky1">Objednávky</option>
-                <option data-value="Podpora">Podpora</option>
-                <option disabled class="kontakt_form_select__colored-option">----Tachografy----</option>
+                <option data-value="Podpora1">Podpora</option>
+                <option disabled class="kontakt_form_select__colored-option">----Školení----</option>
                 <option data-value="Dotazy2">Dotazy</option>
                 <option data-value="Objednávky2">Objednávky</option>
-                <option data-value="Servis">Servis</option>
+                <option data-value="Servis2">Servis</option>
             </select>
             <label for="textarea">Zpráva pro nás</label>
             <textarea id="textarea" name="textarea"></textarea>
@@ -80,7 +85,7 @@
     </main>
     <footer class="site-footer">
         <div class="footer_top">
-            <a class="ftop__logo" href="index.html"><img src="images/Logo-NapisBily.svg" alt="Logo stránky, bílý nápis Tachoin"></a>
+            <a class="ftop__logo" href="/"><img src="images/Logo-NapisBily.svg" alt="Logo stránky, bílý nápis Tachoin"></a>
             <ul class="ftop_list">
                 <li>
                     <p class="ftop_list__heading">E-mail</p>
@@ -88,7 +93,7 @@
                 </li>
                 <li>
                     <p class="ftop_list__heading">Mobil</p>
-                    <a href="tel:+420739442985">+420 739 442 985</a>
+                    <a href="tel:+420731103488">+420 731 103 488</a>
                 </li>
                 <li>
                     <p class="ftop_list__heading">Adresa</p>

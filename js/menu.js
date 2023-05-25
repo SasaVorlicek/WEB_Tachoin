@@ -7,6 +7,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
     })
     document.getElementById("sluzby-click").addEventListener("click", () => {
-        document.getElementById("sluzby-active").classList.toggle("sluzby-active")
+        document.getElementById("sluzby-active").classList.toggle("sluzby-active");
     })
 })

@@ -9,9 +9,11 @@ $subject = $_POST['PHPInput'];
 
 $subjectWithoutNumber = substr($subject, 0, -1);
 if (substr($subject, -1) === '1') {
-    $full_subject = "Školení --- $subjectWithoutNumber";
-} elseif (substr($subject, -1) === '2') {
     $full_subject = "Tachografy --- $subjectWithoutNumber";
+} elseif (substr($subject, -1) === '2') {
+    $full_subject = "Školení --- $subjectWithoutNumber";
+} elseif (substr($subject, -1) === '3') {
+    $full_subject = "Tachoin --- $subjectWithoutNumber";
 } else {
     $full_subject = $subject;
 }
