@@ -45,9 +45,12 @@ h1,h2,h3,h4,h5,h6 {
 .coloredText {
     color: var(--primary-red) !important;
 }
-
 .boldText {
     font-family: MainFontBold !important;
+}
+.underline {
+    text-decoration: underline;
+    cursor: pointer;
 }
 
 
@@ -550,7 +553,7 @@ p.ftop_list__heading {
 }
 
 .tachografy__heading {
-    font-size: 2.4em;
+    font-size: 1.8em;
     margin-bottom: 0;
 }
 
@@ -571,26 +574,7 @@ p.ftop_list__heading {
     flex-direction: column;
     margin-top: 2em;
     margin-bottom: 3.5em;
-}
-
-.tachografy_list--small::after {
-    font-size: 0.8em;
-    display: block;
-}
-
-.tachografy_list--small:first-of-type::after {
-    content: " - Vyřídíte na úřadě, kde se vyřizují karty řidičů";
-}
-
-.tachografy_list--small:nth-of-type(2)::after {
-    content: " - Pro stažení dat z tachografu a karet řidičů";
-}
-
-.tachografy_list--small:last-of-type::after {
-    content: " - Pro zobrazení stažených dat a zjištění přestupků";
-}
-
-  
+} 
 
 @media screen and (min-width: 800px) { 
 
@@ -701,7 +685,7 @@ p.ftop_list__heading {
         font-size: 1.4em;
     }
     .tachografy__heading {
-        font-size: 2.8em;
+        font-size: 2.3em;
     }
     .tachografy_list li {
         font-size: 1.2em;

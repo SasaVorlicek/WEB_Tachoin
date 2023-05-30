@@ -9,16 +9,26 @@ function Smazat() {
 document.addEventListener("DOMContentLoaded", () => { 
 
 
+const select = document.getElementById("subject");
+const PHPInput = document.getElementById("PHPInput");
 
-//řešíme select optiony pro správný subject v emailu
-const select = document.getElementById('subject');
-select.addEventListener('change', function() {
+select.addEventListener("change", function() {
   const selectedOption = select.options[select.selectedIndex];
-  const selectedValue = selectedOption.getAttribute('data-value');
-  
-  document.getElementById('PHPInput').value = selectedValue;
+  const selectedValue = selectedOption.getAttribute("data-value");
+  PHPInput.value = selectedValue;
 });
-//////
+
+const urlParams = new URLSearchParams(window.location.search);
+const selectedValue = urlParams.get("selectedValue");
+for (let i = 0; i < select.options.length; i++) {
+  const option = select.options[i];
+  if (option.getAttribute("data-value") === selectedValue) {
+    option.selected = true;
+    PHPInput.value = selectedValue;
+    break;
+  }
+}
+
   const popup = document.getElementById("FormPopup");
   const popupError = document.getElementById("FormPopupError");
   const form = document.getElementById("form");
