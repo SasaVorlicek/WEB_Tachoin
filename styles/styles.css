@@ -56,7 +56,7 @@ h1,h2,h3,h4,h5,h6 {
 
 
 .site-header {
-    background-image: url("../images/Header-Background.jpg");
+    background-image: url("../images/Header-Background.png");
     background-repeat: no-repeat;
     background-position: center center;
     background-size: cover;
@@ -495,7 +495,7 @@ p.ftop_list__heading {
   }
 
   .sitems__item {
-    max-width: 380px;
+    max-width: 275px;
     margin: 0;
   }
 
@@ -506,7 +506,7 @@ p.ftop_list__heading {
   }
 
   .sitems__item figcaption {
-    height: 220px;
+    height: 280px;
   }
 
   .sitems__item figcaption h3 {
@@ -616,7 +616,7 @@ ul.tachoin_content__smallUl li {
         height: 65vh
     }
     .others--header {
-        height: 30vh;
+        height: 35vh;
     }
 
     .header__navbar {
@@ -856,6 +856,10 @@ ul.tachoin_content__smallUl li {
         gap: 4em;
         flex-direction: row;
         margin-top: 5em;
+    }
+    .sitems__item {
+        width: 30%;
+        max-width: 380px;
     }
 }
 @media screen and (min-width: 1200px) { 
