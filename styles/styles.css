@@ -576,6 +576,23 @@ p.ftop_list__heading {
     margin-bottom: 3.5em;
 } 
 
+.tachografy_list--small::after {
+    font-size: 0.8em;
+    display: block;
+}
+
+.tachografy_list--small:first-of-type::after {
+    content: " - Vyřídíte na úřadě, kde se vyřizují karty řidičů";
+}
+
+.tachografy_list--small:nth-of-type(2)::after {
+    content: " - Pro stažení dat z tachografu a karet řidičů";
+}
+
+.tachografy_list--small:last-of-type::after {
+    content: " - Pro zobrazení stažených dat a zjištění přestupků";
+}
+
 .tachoin_content {
     margin-top: 4em;
 }
@@ -721,6 +738,11 @@ ul.tachoin_content__smallUl li {
     .tachoin_content {
         padding-left: 4em;
     } 
+
+    .main_subheadingType1 {
+        width: 80%;
+        margin: 1em auto;
+    }
 }
 
 @media screen and (min-width: 1100px) { 

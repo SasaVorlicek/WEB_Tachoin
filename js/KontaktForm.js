@@ -11,7 +11,6 @@ document.addEventListener("DOMContentLoaded", () => {
 
 const select = document.getElementById("subject");
 const PHPInput = document.getElementById("PHPInput");
-
 select.addEventListener("change", function() {
   const selectedOption = select.options[select.selectedIndex];
   const selectedValue = selectedOption.getAttribute("data-value");
