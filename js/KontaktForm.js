@@ -47,9 +47,8 @@ for (let i = 0; i < select.options.length; i++) {
               popup.style.display = "block";
               Smazat();
             } else if (data.status === "captcha-failed") {
-              PopupText.innerText = "Captcha ověření selhalo";
+              PopupText.innerText = "Captcha ověření selhalo, zkuste to prosím znovu";
               popup.style.display = "block";
-              Smazat();
             }
           })
           .catch(() => {

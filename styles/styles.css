@@ -451,7 +451,8 @@ p.ftop_list__heading {
     justify-content: center;
     align-items: center;
     background-color: #fff;
-    width: 280px;
+    width: 400px;
+    min-width: 280px;
     height: 130px;
     margin: 0 auto;
     margin-top: 200px;
