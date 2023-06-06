@@ -29,8 +29,8 @@ for (let i = 0; i < select.options.length; i++) {
 }
 
   const popup = document.getElementById("FormPopup");
-  const popupError = document.getElementById("FormPopupError");
   const form = document.getElementById("form");
+  const PopupText = document.getElementById("FormPopupText"); 
 
   form.addEventListener("submit", (event) => {
       event.preventDefault();
@@ -43,23 +43,27 @@ for (let i = 0; i < select.options.length; i++) {
           .then((response) => response.json())
           .then((data) => {
             if (data.status === "success") {
+              PopupText.innerText = "Formulář byl odeslán";
+              popup.style.display = "block";
+              Smazat();
+            } else if (data.status === "captcha-failed") {
+              PopupText.innerText = "Captcha ověření selhalo";
               popup.style.display = "block";
               Smazat();
             }
           })
           .catch(() => {
-            popupError.style.display = "block";
-            Smazat()
+            PopupText.innerText = "Nastala chyba, zkuste to prosím znovu";
+            popup.style.display = "block";
+            Smazat();
           });
-  });
+      });
   document.getElementById("FormCloseBtn").addEventListener("click", function() {
       popup.style.display = "none";
-      popupError.style.display = "none";
   });
   document.addEventListener("click", (event) => {
       if (event.target !== document.querySelector(".PopupWindow_content") && !document.querySelector(".PopupWindow_content").contains(event.target)) {
           popup.style.display = "none";
-          popupError.style.display = "none";
       }
   });
 });

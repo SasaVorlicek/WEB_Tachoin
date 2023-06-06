@@ -10,6 +10,7 @@
     <link href="images/Favicon.svg" rel="icon" media="(prefers-color-scheme: light)"/>
     <script src="js/menu.js"></script>
     <script src="js/KontaktForm.js"></script>
+    <script src="https://www.google.com/recaptcha/api.js" async defer></script>
 
 
     <title>Tachoin | Kontakt</title>
@@ -68,18 +69,13 @@
             <label for="textarea">Zpráva pro nás</label>
             <textarea id="textarea" name="textarea"></textarea>
             <input type="hidden" id="PHPInput" name="PHPInput" value="">
+            <div class="g-recaptcha" data-sitekey="6LeJcDMmAAAAAGoUjdR4z0_xmDd-nRiBjrjX03kg"></div>
             <p class="submit__cta"><button type="submit"  class="submit_button">Odeslat</button></p>
         </form>
         <div id="FormPopup" class="form__PopupWindow">
             <div class="PopupWindow_content">
-              <p>Formulář byl odeslán</p>
-              <button id="FormCloseBtn">Zavřít</button>
-            </div>
-        </div>
-        <div id="FormPopupError" class="form__PopupWindow">
-            <div class="PopupWindow_content">
-              <p>Nastala chyba, zkuste to prosím znovu</p>
-              <button id="FormCloseBtn">Zavřít</button>
+              <p id="FormPopupText">Chyba formuláře</p>
+              <button id="FormCloseBtn">Zavřít  </button>
             </div>
         </div>
     </main>

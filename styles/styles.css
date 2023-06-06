@@ -606,6 +606,12 @@ ul.tachoin_content__smallUl li {
     padding: 10px 0;
 }
 
+.g-recaptcha {
+    display: flex;
+    justify-content: center;
+    margin-top: 3em;
+}
+
 
 @media screen and (min-width: 800px) { 
 
