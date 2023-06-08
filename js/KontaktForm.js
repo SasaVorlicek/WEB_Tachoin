@@ -28,35 +28,42 @@ for (let i = 0; i < select.options.length; i++) {
   }
 }
 
-  const popup = document.getElementById("FormPopup");
-  const form = document.getElementById("form");
-  const PopupText = document.getElementById("FormPopupText"); 
+const popup = document.getElementById("FormPopup");
+const form = document.getElementById("form");
+const PopupText = document.getElementById("FormPopupText"); 
 
-  form.addEventListener("submit", (event) => {
+form.addEventListener("submit", (event) => {
+  const selectedOption = select.options[select.selectedIndex];
+  if (selectedOption.id === "bad-option") {
       event.preventDefault();
-
+      PopupText.innerText = "Vyberte prosím službu";
+      popup.style.display = "block";
+  } else {
+    event.preventDefault();
       const formData = new FormData(form);
       fetch("submit-form.php", {
           method: "POST",
           body: formData,
-        })
-          .then((response) => response.json())
-          .then((data) => {
-            if (data.status === "success") {
+      })
+      .then((response) => response.json())
+      .then((data) => {
+          if (data.status === "success") {
               PopupText.innerText = "Formulář byl odeslán";
               popup.style.display = "block";
               Smazat();
-            } else if (data.status === "captcha-failed") {
+          } else if (data.status === "captcha-failed") {
               PopupText.innerText = "Captcha ověření selhalo, zkuste to prosím znovu";
               popup.style.display = "block";
-            }
-          })
-          .catch(() => {
-            PopupText.innerText = "Nastala chyba, zkuste to prosím znovu";
-            popup.style.display = "block";
-            Smazat();
-          });
+          }
+      })
+      .catch(() => {
+          PopupText.innerText = "Nastala chyba, zkuste to prosím znovu";
+          popup.style.display = "block";
+          Smazat();
       });
+  }
+});
+      
   document.getElementById("FormCloseBtn").addEventListener("click", function() {
       popup.style.display = "none";
   });

@@ -5,7 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" type="text/css" href="styles/normalize.css">
-    <link rel="stylesheet" type="text/css" href="styles/styles.css">
+    <link rel="stylesheet" type="text/css" href="styles/styles.css?=v2">
     <link href="images/FaviconWhite.svg" rel="icon" media="(prefers-color-scheme: dark)"/>
     <link href="images/Favicon.svg" rel="icon" media="(prefers-color-scheme: light)"/>
     <script src="js/menu.js"></script>
@@ -52,7 +52,7 @@
             <input required id="tel" type="tel" name="tel" pattern="[0-9 ]+" title="Vložte prosím reálné telefonní číslo">
             <label for="subject">Služby</label>
             <select id="subject" name="subject" required>
-                <option disabled selected >--Vyberte předmět Vaší zprávy--</option>
+                <option disabled selected id="bad-option">--Vyberte předmět Vaší zprávy--</option>
                 <option disabled class="kontakt_form_select__colored-option">----Tachoin----</option>
                 <option data-value="Dotazy3">Dotazy</option>
                 <option data-value="Objednávky3">Objednávky</option>
@@ -70,12 +70,12 @@
             <textarea id="textarea" name="textarea"></textarea>
             <input type="hidden" id="PHPInput" name="PHPInput" value="">
             <div class="g-recaptcha" data-sitekey="6LeJcDMmAAAAAGoUjdR4z0_xmDd-nRiBjrjX03kg"></div>
-            <p class="submit__cta"><button type="submit"  class="submit_button">Odeslat</button></p>
+            <p class="submit__cta"><button type="submit" class="submit_button">Odeslat</button></p>
         </form>
         <div id="FormPopup" class="form__PopupWindow">
             <div class="PopupWindow_content">
               <p id="FormPopupText">Chyba formuláře</p>
-              <button id="FormCloseBtn">Zavřít  </button>
+              <button id="FormCloseBtn">Zavřít</button>
             </div>
         </div>
     </main>
