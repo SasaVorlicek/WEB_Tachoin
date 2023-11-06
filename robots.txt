@@ -1,0 +1,6 @@
+User-agent:*
+Disallow: /images/
+Disallow: /images/IMG-Tachoin.svg
+Disallow: /images/IMG-Tachografy.svg
+Disallow: /images/IMG-Skoleni.svg
+Allow: /
